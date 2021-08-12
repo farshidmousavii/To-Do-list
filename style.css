@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+:root{
+    --primaryColor : #6d28d9 ;
+    --secondaryColor : #ede9f3 ;
+    --mainWhite : #fff ;
+    --mainBlack : #222 ;
+    --mainGray : #7c7c7c ;
+    --mainSpacing : 0.1rem ;
+    --mainTransition : all 0.3s linear ;
+    --mainRed :#db2777;
+    --bodyColor : #f6f6f6;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bodyColor);
+}
+
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container{
+    display: flex;
+
+}
+.todo-container{
+    width: 25rem;
+}
+form {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input{
+    flex: 1;
+}
+form input , form button {
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+form button{
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover{
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+}
+
+.todo{
+    background-color: var(--secondaryColor);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3rem;
+    transition: var(--mainTransition);
+}
+.todo li {
+    flex: 1;
+    padding: 5px;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+.todo span {
+    display: block;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.fa-trash-alt{
+    color: var(--mainRed);
+}
+.fa-check-square{
+    color: green;
+}
